@@ -11,7 +11,10 @@ public class PlayerController : MonoBehaviour {
     public float checkRadius;
     public LayerMask whatIsGround;
     public bool isGround;
-	// Use this for initialization
+
+    public Animator Anim;
+
+
 	void Start () {
 		
 	}
@@ -39,6 +42,9 @@ public class PlayerController : MonoBehaviour {
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
+
+        Anim.SetFloat("Speed",Mathf.Abs(rb.velocity.x));
+        Anim.SetBool("Grounded", isGround);
 
     }
 }
