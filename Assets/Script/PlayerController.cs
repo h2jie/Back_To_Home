@@ -13,10 +13,13 @@ public class PlayerController : MonoBehaviour {
     public bool isGround;
 
     public Animator Anim;
+    public Vector2 RespawnPosition;
+    public LevelManager level;
 
 
 	void Start () {
-		
+        RespawnPosition = transform.position;
+        level = FindObjectOfType<LevelManager>();
 	}
 	
 	// Update is called once per frame
@@ -52,7 +55,14 @@ public class PlayerController : MonoBehaviour {
         if (other.tag=="KillPlane")
         {
             //Destroy(this.gameObject);
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
+            //transform.position = RespawnPosition;
+            level.Respawn();
+
+        }
+        if (other.tag=="CheckPoint")
+        {
+            RespawnPosition = other.transform.position;
         }
     }
 }
