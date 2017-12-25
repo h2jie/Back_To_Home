@@ -7,12 +7,20 @@ public class Enemy : MonoBehaviour {
     private Transform player;
     public float attackDistance;
     private Animator anim;
-    public float speed=5;
+    public float speed;
+    public LevelManager level;
+    public AudioSource EnemyDiesAudio;
+
+    public Vector3 originPosition;
 
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         anim = this.GetComponent<Animator>();
+        level = FindObjectOfType<LevelManager>();
+        originPosition = transform.position;
+
+
 	}
 	
 	// Update is called once per frame
@@ -37,4 +45,30 @@ public class Enemy : MonoBehaviour {
             anim.SetBool("Run",false);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            if (collision.contacts[0].normal.x > -1f && collision.contacts[0].normal.x < 1f && collision.contacts[0].normal.y < -0.8f && collision.contacts[0].normal.y > -1.8f)
+            {
+                if (EnemyDiesAudio != null)
+                {
+                    EnemyDiesAudio.Play();
+                }
+                collision.rigidbody.AddForce(new Vector2(0f, 500f));
+                this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -200f));
+                this.gameObject.SetActive(false);
+
+
+            }
+            else
+            {
+                level.Respawn();
+                transform.position = originPosition;
+
+            }
+        }
+    }
+
 }
