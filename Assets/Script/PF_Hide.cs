@@ -11,7 +11,6 @@ public class PF_Hide : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
         onCollision.Invoke();
     }
 }

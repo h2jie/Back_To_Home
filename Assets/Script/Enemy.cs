@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
@@ -10,6 +11,7 @@ public class Enemy : MonoBehaviour {
     public float speed;
     public LevelManager level;
     public AudioSource EnemyDiesAudio;
+  
 
     public Vector3 originPosition;
 
@@ -46,20 +48,24 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         if (collision.gameObject.tag == "Player")
         {
-            if (collision.contacts[0].normal.x > -1f && collision.contacts[0].normal.x < 1f && collision.contacts[0].normal.y < -0.8f && collision.contacts[0].normal.y > -1.8f)
+            if ( collision.contacts[0].normal.y < -0.1f)
             {
                 if (EnemyDiesAudio != null)
                 {
                     EnemyDiesAudio.Play();
                 }
-                collision.rigidbody.AddForce(new Vector2(0f, 500f));
-                this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -200f));
-                this.gameObject.SetActive(false);
 
+                collision.rigidbody.AddForce(new Vector2(0f, 500f));
+                this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -150f));
+                anim.SetBool("Dead", true);
+
+                Destroy(this.gameObject);
 
             }
             else
@@ -70,5 +76,8 @@ public class Enemy : MonoBehaviour {
             }
         }
     }
+
+
+
 
 }

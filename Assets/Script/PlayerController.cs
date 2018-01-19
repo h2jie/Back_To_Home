@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour {
             //transform.position = RespawnPosition;
             level.Respawn();
 
+
         }
         if (other.tag=="CheckPoint")
         {

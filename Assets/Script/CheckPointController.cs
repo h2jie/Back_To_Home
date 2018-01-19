@@ -7,6 +7,7 @@ public class CheckPointController : MonoBehaviour {
     public Sprite CheckClose;
     public SpriteRenderer mySprite;
     public bool IsCheckPoint;
+    public Enemy enemy;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,7 @@ public class CheckPointController : MonoBehaviour {
         {
             mySprite.sprite = CheckOpen;
             IsCheckPoint = true;
+
         }
     }
 }
