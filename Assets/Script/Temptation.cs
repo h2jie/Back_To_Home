@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class Temptation : MonoBehaviour {
 
     public AudioSource starAudio;
+    public UnityEvent onCollision;
 	// Use this for initialization
 	void Start () {
         		
@@ -15,15 +15,6 @@ public class Temptation : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag =="Player")
-        {
-            if (starAudio !=null)
-            {
-                starAudio.Play();
-            }
-            Destroy(this.gameObject);
-        }
-    }
+
+
 }
