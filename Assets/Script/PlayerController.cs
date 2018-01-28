@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
     public Animator Anim;
     public Vector2 RespawnPosition;
     public LevelManager level;
+    public AudioSource audio;
 
 
 	void Start () {
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("Jump") && isGround)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+            audio.Play();
         }
 
         Anim.SetFloat("Speed",Mathf.Abs(rb.velocity.x));
@@ -64,6 +66,7 @@ public class PlayerController : MonoBehaviour {
         if (other.tag=="CheckPoint")
         {
             RespawnPosition = other.transform.position;
+
         }
     }
 }
