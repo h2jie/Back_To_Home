@@ -52,3 +52,6 @@ TagManager:
   - name: Player
     uniqueID: 2601140323
     locked: 0
+  - name: panel
+    uniqueID: 1208617311
+    locked: 0
