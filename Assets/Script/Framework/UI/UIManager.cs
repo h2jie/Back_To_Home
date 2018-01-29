@@ -41,7 +41,7 @@ public class UIManager : MonoBehaviour {
     private UIBase GetUIBase(string UIName){
         foreach (var name in currentUIDict.Keys)
         {
-            if (name==UIName)
+            if (name == UIName)
             {
                 UIBase u = currentUIDict[UIName];
                 return u;
@@ -62,9 +62,8 @@ public class UIManager : MonoBehaviour {
     //Salir de stack, ocultar panel
     public void PopUIPanel(){
         if (UIStack.Count ==0)
-        {
-            return;
-        }
+        return;
+        
 
         UIBase old_topUI = UIStack.Pop();
         old_topUI.DoOnExiting(); 
@@ -77,7 +76,8 @@ public class UIManager : MonoBehaviour {
     }
 
     private void LoadALLUIObject(){
-        string path = Application.dataPath + "Assets/Resources/" + ResourceDir;
+        string path = Application.dataPath + "/Resources/" + ResourceDir;
+
         DirectoryInfo folder = new DirectoryInfo(path);
 
         foreach (FileInfo file in folder.GetFiles("*.prefab"))
