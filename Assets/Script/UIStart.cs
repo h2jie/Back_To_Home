@@ -27,4 +27,10 @@ public class UIStart : UIBase
         UIManager.Instance.PushUIPanel("UISetting");
 
     }
+
+    public void GoToAbout()
+    {
+        UIManager.Instance.PushUIPanel("UIAbout");
+
+    }
 }
