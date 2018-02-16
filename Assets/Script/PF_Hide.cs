@@ -9,8 +9,13 @@ public class PF_Hide : MonoBehaviour {
 
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        onCollision.Invoke();
+
+        if (collision.contacts[0].normal.y > -1f)
+        {
+            onCollision.Invoke();
+
+        }
     }
 }
