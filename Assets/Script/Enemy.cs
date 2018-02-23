@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour {
 
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour {
     public GameObject MySpriteOBJ;
     private Vector3 MySpriteOriginalScale;
     public GameObject enemyExplosion;
+    public UnityEvent onCollision;
   
 
     public Vector3 originPosition;
@@ -106,8 +108,8 @@ public class Enemy : MonoBehaviour {
                 EnemyDead = true;
                 Debug.Log("Monster died");
                 Instantiate(enemyExplosion,this.transform.position,this.transform.rotation);
-
                 Invoke("iDied", 0.15f);
+                onCollision.Invoke();
             }
             else
             {
