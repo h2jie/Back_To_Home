@@ -6,6 +6,8 @@ public class LevelManager : MonoBehaviour {
     public PlayerController playerController;
     public float waitSecont;
     public GameObject deadExplosion;
+    public AudioSource audio;
+
 	// Use this for initialization
 	void Start () {
         playerController = FindObjectOfType<PlayerController>();	
@@ -18,6 +20,7 @@ public class LevelManager : MonoBehaviour {
 
     public void Respawn(){
         StartCoroutine("RespawnCo");
+        audio.Play();
     }
 
     public IEnumerator RespawnCo()
@@ -27,5 +30,6 @@ public class LevelManager : MonoBehaviour {
         yield return new WaitForSeconds(waitSecont);
         playerController.transform.position = playerController.RespawnPosition;
         playerController.gameObject.SetActive(true);
+
     }
 }

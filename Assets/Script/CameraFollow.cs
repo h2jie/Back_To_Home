@@ -8,9 +8,12 @@ public class CameraFollow : MonoBehaviour {
     public float Ahead;
     public Vector3 TargetPos;
     public float smooth;
+
+
+
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame

@@ -9,9 +9,7 @@ public class Enemy : MonoBehaviour {
 
     private bool EnemyAwake = false;
     private bool EnemyDead = false;
-
     private float AwakeDistance = 5f;
-
     public float attackDistance;
     public Animator anim;
     public float speed;
@@ -19,6 +17,7 @@ public class Enemy : MonoBehaviour {
     public AudioSource EnemyDiesAudio;
     public GameObject MySpriteOBJ;
     private Vector3 MySpriteOriginalScale;
+    public GameObject enemyExplosion;
   
 
     public Vector3 originPosition;
@@ -106,6 +105,7 @@ public class Enemy : MonoBehaviour {
                 this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, -200f));
                 EnemyDead = true;
                 Debug.Log("Monster died");
+                Instantiate(enemyExplosion,this.transform.position,this.transform.rotation);
 
                 Invoke("iDied", 0.15f);
             }

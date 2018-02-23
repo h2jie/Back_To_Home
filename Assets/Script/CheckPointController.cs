@@ -8,6 +8,8 @@ public class CheckPointController : MonoBehaviour {
     public SpriteRenderer mySprite;
     public bool IsCheckPoint;
     public Enemy enemy;
+    public AudioSource audio;
+    public bool hasPlay=false;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +25,11 @@ public class CheckPointController : MonoBehaviour {
     {
         if (other.tag=="Player")
         {
+            if (hasPlay==false)
+            {
+                audio.Play();
+                hasPlay = true;
+            }
             mySprite.sprite = CheckOpen;
             IsCheckPoint = true;
 

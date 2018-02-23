@@ -8,7 +8,6 @@ public class PF_Hide : MonoBehaviour {
     public UnityEvent onCollision;
 
 
-
     void OnCollisionEnter2D(Collision2D collision)
     {
 
