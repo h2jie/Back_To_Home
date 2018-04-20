@@ -21,8 +21,10 @@ public class UIDef
             case UIDef.StartUI:
                 return 1;
             case UIDef.SelectLevelUI:
+            case UIDef.DieUI:
+                
             case UIDef.SettingsUI:
-                return 1;
+                
             case UIDef.AboutUI:
                 return 2;
 
@@ -32,6 +34,7 @@ public class UIDef
 
     //Obtener el numero del nivel 
     public static string GetLevelName(int level){
+        
         return string.Format("Level_{0}", level);
     }
 }

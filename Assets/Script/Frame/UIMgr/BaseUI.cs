@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class BaseUI : MonoBehaviour 
+public abstract class BaseUI : MonoBehaviour 
 {
 
     [HideInInspector]
@@ -27,11 +27,13 @@ public class BaseUI : MonoBehaviour
         }
     }
 
+
     public void Show(object param)
     {
         CacheGameObject.SetActive(true);
         OnShow(param);
     }
+
 
     public void Hide()
     {
@@ -42,10 +44,15 @@ public class BaseUI : MonoBehaviour
     [HideInInspector]
     public Canvas mainCanvas = null;
 
-	void Awake() 
-	{
+
+
+    void Awake()
+    {
         OnAwake();
-	}
+    }
+
+
+
 
     public void UIInit()
     {
@@ -62,13 +69,18 @@ public class BaseUI : MonoBehaviour
     }
 
 
-    protected virtual void OnInit() { }
-    protected virtual void OnAwake() { }
-
-    protected virtual void OnShow(object param) { }
+    protected abstract void OnInit();
+    protected abstract void OnAwake();
 
 
-    protected virtual void OnHide() { }
 
-    protected virtual void OnDestroy() { }
+
+    protected abstract void OnShow(object param);
+
+
+
+    protected abstract void OnHide();
+
+
+    protected abstract void OnDestroy();
 }

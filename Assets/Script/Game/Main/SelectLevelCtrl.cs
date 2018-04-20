@@ -98,6 +98,7 @@ public class SelectLevelCtrl : BaseUI, UIMgr.ILoadUIListener
             {
                 return;
             }
+            AppMgr.Instance.HeroPos = Vector3.zero;
             UIMgr.Instance.ShowUI(UIDef.GetLevelName(level), typeof(LevelMgr), SelectLevelCtrl.Instance, level);
             Log.Debug("Nivel seleccionado ：" + level);
         }
@@ -266,11 +267,10 @@ public class SelectLevelCtrl : BaseUI, UIMgr.ILoadUIListener
     }
 
     protected override void OnHide() {
-        base.OnHide();
+
     }
 
     protected override void OnDestroy() {
-        base.OnDestroy();
         Instance = null;
     }
 

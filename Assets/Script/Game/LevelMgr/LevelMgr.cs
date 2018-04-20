@@ -6,6 +6,7 @@ public class LevelMgr : BaseUI , IEventListener , UIMgr.ILoadUIListener
 
     private int mCurrentLevel;
 
+
     protected override void OnInit()
     {
 
@@ -44,10 +45,12 @@ public class LevelMgr : BaseUI , IEventListener , UIMgr.ILoadUIListener
         switch (evid)
         {
             case EventDef.LevelEvent.PlayerDie:
+
                 UIMgr.Instance.ShowUI(UIDef.DieUI, typeof(DieCtrl), this,mCurrentLevel);
+
                 return false;
             case EventDef.LevelEvent.GameOver:
-                Log.Debug("---------游戏完成！");
+                Log.Debug("---------Game Complete！");
 
                 if (!AppMgr.Instance.OpenLevels.Contains(mCurrentLevel + 1))
                 {

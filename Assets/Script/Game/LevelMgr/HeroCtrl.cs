@@ -39,7 +39,9 @@ public class HeroCtrl : MonoBehaviour ,IEventListener
 
 
     private bool isGameOver = false;
-    
+
+    public AudioSource audio;
+
 	void Awake()
 	{
         if (AppMgr.Instance.HeroPos == Vector3.zero)
@@ -89,6 +91,7 @@ public class HeroCtrl : MonoBehaviour ,IEventListener
                 isJump = true;
                 isGround = false;
                 playerRigidbody2D.AddForce(new Vector2(0, ySpeed));
+                audio.Play();
             }
         }
 

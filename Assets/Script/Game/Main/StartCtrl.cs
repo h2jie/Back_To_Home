@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class StartCtrl : BaseUI , UIMgr.ILoadUIListener
 {
+
     private List<string> mFindNames = new List<string>()
     {
         "BtnStart",
@@ -20,6 +21,7 @@ public class StartCtrl : BaseUI , UIMgr.ILoadUIListener
     {
         List<Transform> findTrans = new List<Transform>();
         ComUtil.GetTransformInChild(mFindNames, CacheTransform, ref findTrans);
+
 
         for (int i = 0; i < findTrans.Count;i++ )
         {

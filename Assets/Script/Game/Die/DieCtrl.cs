@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class DieCtrl : BaseUI 
+public class DieCtrl : BaseUI, UIMgr.ILoadUIListener
+
 {
     private int mCurrentLevel = 1;
     private int mDieNum = 0;
@@ -13,7 +14,7 @@ public class DieCtrl : BaseUI
     {
         List<Transform> findTrans = new List<Transform>();
         ComUtil.GetTransformInChild(mFindNames, CacheTransform, ref findTrans);
-        for (int i = 0; i < findTrans.Count;i++ )
+        for (int i = 0; i < findTrans.Count; i++)
         {
             if (findTrans[i].name.Equals(mFindNames[0]))
             {
@@ -27,14 +28,17 @@ public class DieCtrl : BaseUI
         }
     }
 
+
+
     private void OnRestartClick()
     {
-        
+        UIMgr.Instance.DestroyUI(UIDef.GetLevelName(mCurrentLevel));
+        UIMgr.Instance.ShowUI(UIDef.GetLevelName(mCurrentLevel), typeof(LevelMgr), this, mCurrentLevel);
     }
 
     protected override void OnAwake()
     {
-        
+
     }
 
     protected override void OnShow(object param)
@@ -57,6 +61,15 @@ public class DieCtrl : BaseUI
     }
 
     protected override void OnDestroy()
+    {
+    }
+
+    public void FiniSh(BaseUI ui)
+    {
+        UIMgr.Instance.HideUI(this.UIName);
+    }
+
+    public void Failure()
     {
     }
 }
