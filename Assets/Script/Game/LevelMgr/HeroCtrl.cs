@@ -69,6 +69,7 @@ public class HeroCtrl : MonoBehaviour ,IEventListener
             return;
 	    }
 
+
         if(Input.GetButtonDown("Jump"))
         {
             if (isGround && !isJump)
@@ -78,6 +79,7 @@ public class HeroCtrl : MonoBehaviour ,IEventListener
                 playerRigidbody2D.AddForce(new Vector2(0, ySpeed));
             }
         }
+
 	}
 
     void FixedUpdate()
@@ -87,12 +89,13 @@ public class HeroCtrl : MonoBehaviour ,IEventListener
             return;
         }
 
+
         isGround = Physics2D.OverlapCircle(checkGroudPos.position, radius, GroudMask);
         float dir = Input.GetAxis("Horizontal");
 
         isLeft = false;
 
-        if (dir < -0.01f)
+        if (dir < -0f)
         {
             isLeft = true;
         }
@@ -102,6 +105,7 @@ public class HeroCtrl : MonoBehaviour ,IEventListener
         playerAnimator.SetBool("IsLeft", isLeft);
         playerRigidbody2D.velocity = new UnityEngine.Vector2(dir * xSpeed, playerRigidbody2D.velocity.y);
         isJump = false;
+
     }
 
     private Vector3 mTragetPos = Vector3.zero;
