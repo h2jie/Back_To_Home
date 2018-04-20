@@ -70,6 +70,10 @@ public class AppMgr : EventNode
         }
     }
 
+    public Vector3 HeroPos{
+        get;set;
+    }
+
 
     #region GuardarModuloDeDatos
 
@@ -100,21 +104,23 @@ public class AppMgr : EventNode
             }
             return list;
         }
-        set
+
+    }
+
+    public void AddOpenLevel(int level){
+        StringBuilder sb = new StringBuilder();
+        string openLevelStr = PlayerPrefs.GetString(mOpenLevelsKey, "");
+
+        if (string.IsNullOrEmpty(openLevelStr))
         {
-            StringBuilder sb = new StringBuilder();
-            List<int> list = value;
-            for (int i = 0; i < list.Count; i++)
-            {
-                sb.Append(list[i]);
-                if (i < list.Count - 1)
-                {
-                    sb.Append("-");
-                }
-            }
-            PlayerPrefs.SetString(mOpenLevelsKey, sb.ToString());
-            PlayerPrefs.Save();
+            openLevelStr = "1";
         }
+
+        sb.Append(openLevelStr).Append("-").Append(level);
+            
+       
+        PlayerPrefs.SetString(mOpenLevelsKey, sb.ToString());
+        PlayerPrefs.Save();
     }
     #endregion
 }

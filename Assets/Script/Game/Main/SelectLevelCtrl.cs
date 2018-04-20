@@ -3,9 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using DG.Tweening;
- 
-public class SelectLevelCtrl : BaseUI , UIMgr.ILoadUIListener
+
+public class SelectLevelCtrl : BaseUI, UIMgr.ILoadUIListener
 {
+
+    public static SelectLevelCtrl Instance{
+        private set;
+        get;
+    }
 
     private List<Image> mPages = new List<Image>();//, mPage2, mPage3;
 
@@ -93,6 +98,7 @@ public class SelectLevelCtrl : BaseUI , UIMgr.ILoadUIListener
             {
                 return;
             }
+            UIMgr.Instance.ShowUI(UIDef.GetLevelName(level), typeof(LevelMgr), SelectLevelCtrl.Instance, level);
             Log.Debug("Nivel seleccionado ：" + level);
         }
     }
@@ -109,6 +115,7 @@ public class SelectLevelCtrl : BaseUI , UIMgr.ILoadUIListener
 
     protected override void OnInit()
     {
+        Instance = this;
         List<Transform> findPages = new List<Transform>();
         ComUtil.GetTransformInChild(mFindNames, CacheTransform, ref findPages);
         List<Transform> findLevels = new List<Transform>();
@@ -258,9 +265,14 @@ public class SelectLevelCtrl : BaseUI , UIMgr.ILoadUIListener
         }
     }
 
-    protected override void OnHide() { }
+    protected override void OnHide() {
+        base.OnHide();
+    }
 
-    protected override void OnDestroy() { }
+    protected override void OnDestroy() {
+        base.OnDestroy();
+        Instance = null;
+    }
 
     public void FiniSh(BaseUI ui)
     {

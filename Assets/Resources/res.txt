@@ -1,4 +1,8 @@
+CanvasAbout=
+CanvasDie=
+CanvasSelectLevel=
 CanvasSettings=
 CanvasStart=
-CanvasAbout=
-CanvasSelectLevel=
+Level-1=
+Level_1=
+UILose=

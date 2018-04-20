@@ -29,4 +29,9 @@ public class UIDef
         }
         return 0;
     }
+
+    //Obtener el numero del nivel 
+    public static string GetLevelName(int level){
+        return string.Format("Level_{0}", level);
+    }
 }

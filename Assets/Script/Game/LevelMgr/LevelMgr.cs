@@ -47,6 +47,13 @@ public class LevelMgr : BaseUI , IEventListener , UIMgr.ILoadUIListener
                 UIMgr.Instance.ShowUI(UIDef.DieUI, typeof(DieCtrl), this,mCurrentLevel);
                 return false;
             case EventDef.LevelEvent.GameOver:
+                Log.Debug("---------游戏完成！");
+
+                if (!AppMgr.Instance.OpenLevels.Contains(mCurrentLevel + 1))
+                {
+                    AppMgr.Instance.AddOpenLevel(mCurrentLevel + 1);
+                }
+
                 return false;
         }
         return false;

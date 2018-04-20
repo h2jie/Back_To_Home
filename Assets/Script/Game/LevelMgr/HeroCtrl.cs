@@ -36,9 +36,21 @@ public class HeroCtrl : MonoBehaviour ,IEventListener
 
     [Header("Determine el área circular del piso Radio del círculo")]
     public float radius = 4.5f;
+
+
+    private bool isGameOver = false;
     
 	void Awake()
 	{
+        if (AppMgr.Instance.HeroPos == Vector3.zero)
+        {
+            AppMgr.Instance.HeroPos = transform.position;
+        }
+        else
+        {
+            transform.position = AppMgr.Instance.HeroPos;
+        }
+
         if(AppMgr.Instance)
         {
             AppMgr.Instance.AttachEventListener((int)EventDef.LevelEvent.PlayerDie, this);
@@ -64,7 +76,7 @@ public class HeroCtrl : MonoBehaviour ,IEventListener
 	
 	void Update () 
 	{
-        if (isDie)
+        if (isDie || isGameOver)
 	    {
             return;
 	    }
@@ -84,7 +96,7 @@ public class HeroCtrl : MonoBehaviour ,IEventListener
 
     void FixedUpdate()
     {
-        if (isDie)
+        if (isDie || isGameOver)
         {
             return;
         }
@@ -95,7 +107,7 @@ public class HeroCtrl : MonoBehaviour ,IEventListener
 
         isLeft = false;
 
-        if (dir < -0f)
+        if (dir < -0.01f)
         {
             isLeft = true;
         }
@@ -177,6 +189,11 @@ public class HeroCtrl : MonoBehaviour ,IEventListener
                 isDie = true;
                 playerRigidbody2D.velocity = new UnityEngine.Vector2(0, playerRigidbody2D.velocity.y);
                 playerAnimator.SetBool("Die", isDie);
+                return false;
+            case EventDef.LevelEvent.GameOver:
+                isGameOver = true;
+                playerRigidbody2D.velocity = new UnityEngine.Vector2(0, playerRigidbody2D.velocity.y);
+                playerAnimator.SetFloat("Speed", 0);
                 return false;
         }
         return false;
