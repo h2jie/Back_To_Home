@@ -5,15 +5,12 @@ using UnityEngine.UI;
 using System;
 public class PropsSetAction : MonoBehaviour 
 {
-
-    /// <summary>
-    /// Evento que necesita para ejecutar después de la colisión
-    /// </summary>
     [Header("Evento que necesita para ejecutar después de la colisión")]
     public Button.ButtonClickedEvent TriggerEvent;
 
     [Header("Si el personaje está cayendo no puede disparar con los objetos")]
     public bool isFallTrigger = false;
+
     public void OnTriggerEnter2D(Collider2D coll)
     {
 
