@@ -3,6 +3,7 @@ CanvasDie=
 CanvasSelectLevel=
 CanvasSettings=
 CanvasStart=
+DOTweenSettings=
 Level-1=
 Level_1=
 UILose=

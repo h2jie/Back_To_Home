@@ -33,7 +33,9 @@ public class DieCtrl : BaseUI, UIMgr.ILoadUIListener
     private void OnRestartClick()
     {
         UIMgr.Instance.DestroyUI(UIDef.GetLevelName(mCurrentLevel));
+
         UIMgr.Instance.ShowUI(UIDef.GetLevelName(mCurrentLevel), typeof(LevelMgr), this, mCurrentLevel);
+
     }
 
     protected override void OnAwake()

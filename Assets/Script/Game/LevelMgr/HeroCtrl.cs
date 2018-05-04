@@ -97,6 +97,8 @@ public class HeroCtrl : MonoBehaviour ,IEventListener
 
 	}
 
+
+
     void FixedUpdate()
     {
         if (isDie || isGameOver)
@@ -105,8 +107,9 @@ public class HeroCtrl : MonoBehaviour ,IEventListener
         }
 
 
-        isGround = Physics2D.OverlapCircle(checkGroudPos.position, radius, GroudMask);
         float dir = Input.GetAxis("Horizontal");
+
+        isGround = Physics2D.OverlapCircle(checkGroudPos.position, radius, GroudMask);
 
         isLeft = false;
 
