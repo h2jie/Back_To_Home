@@ -1,10 +1,12 @@
-﻿<Properties StartupConfiguration="{63EB71FC-6E11-203D-9919-48E9BB8935EC}|">
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Game/LevelMgr/HeroCtrl.cs">
+﻿<Properties StartupConfiguration="{0C0BD9F0-075A-AAFC-8EC6-CDE39EBD5BB3}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Game/Main/AboutCtrl.cs">
     <Files>
-      <File FileName="Assets/Script/Frame/ResMgr/AssetInfo.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Game/AppMgr.cs" Line="74" Column="17" />
-      <File FileName="Assets/Script/Game/LevelMgr/HeroCtrl.cs" Line="102" Column="5" />
+      <File FileName="Assets/Scripts/Editor/CreateMap.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Game/Die/DieCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Game/LevelMgr/HeroCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Game/LevelMgr/LevelMgr.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Game/Main/AboutCtrl.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
