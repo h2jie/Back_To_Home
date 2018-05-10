@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.IO;
+using DG.Tweening;
 
 public class DieCtrl : BaseUI, UIMgr.ILoadUIListener
 {
@@ -16,7 +17,7 @@ public class DieCtrl : BaseUI, UIMgr.ILoadUIListener
 
     protected override void OnInit()
     {
-
+        
         mCurrentLevel = LevelMgr.Instance.mCurrentLevel;
 
 
@@ -37,7 +38,6 @@ public class DieCtrl : BaseUI, UIMgr.ILoadUIListener
         }
     }
 
-
     private void OnRestartClick()
     {
         UIMgr.Instance.DestroyUI(UIDef.GetLevelName(mCurrentLevel));
@@ -52,10 +52,12 @@ public class DieCtrl : BaseUI, UIMgr.ILoadUIListener
     protected override void OnAwake()
     {
     }
-
+    
+    
     protected override void OnShow(object param)
     {
         SoundManager.Instance.PlaySound("loser");
+        System.Threading.Thread.Sleep(300);
 
         int level = (int) param;
         if (level != mCurrentLevel)

@@ -93,7 +93,6 @@ public class LevelMgr : BaseUI, IEventListener, UIMgr.ILoadUIListener
             case EventDef.LevelEvent.PlayerDie:
                 //Instantiate(DeadExplosion, HeroCtrl.Instance.heroPosition, HeroCtrl.Instance.heroRotation);
                 UIMgr.Instance.ShowUI(UIDef.DieUI, typeof(DieCtrl), this, mCurrentLevel);
-
                 return false;
             case EventDef.LevelEvent.GameOver:
                 Log.Debug("---------Game Complite！");

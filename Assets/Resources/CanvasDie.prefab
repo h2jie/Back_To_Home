@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 22455976}
   - component: {fileID: 22200054}
   - component: {fileID: 11409824}
+  - component: {fileID: 114501084821743600}
   - component: {fileID: 11422610}
   m_Layer: 0
   m_Name: Image
@@ -143,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasOnStart: 0
-  hasOnPlay: 0
+  hasOnPlay: 1
   hasOnUpdate: 0
   hasOnStepComplete: 0
   hasOnComplete: 0
@@ -154,7 +155,18 @@ MonoBehaviour:
       PublicKeyToken=null
   onPlay:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11422610}
+        m_MethodName: DOPlayNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   onUpdate:
@@ -172,9 +184,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  delay: 0
+  delay: 0.5
   duration: 0.6
-  easeType: 6
+  easeType: 15
   easeCurve:
     serializedVersion: 2
     m_Curve:
@@ -200,7 +212,7 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
-  isActive: 1
+  isActive: 0
   isValid: 1
   target: {fileID: 22455976}
   animationType: 2
@@ -508,7 +520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 691}
+  m_AnchoredPosition: {x: 0, y: -1}
   m_SizeDelta: {x: 342.6, y: 418}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &100100000
@@ -589,6 +601,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 10
+--- !u!114 &114501084821743600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158050}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 40306178, guid: 4949a227e0de24a459b7f0adf5561b70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preset: 0
+  onEnableBehaviour: 0
+  onDisableBehaviour: 0
 --- !u!114 &114644892577303332
 MonoBehaviour:
   m_ObjectHideFlags: 1
