@@ -18,10 +18,8 @@ public class Enemy : MonoBehaviour {
     public GameObject MySpriteOBJ;
     private Vector3 MySpriteOriginalScale;
     public GameObject enemyExplosion;
-    public UnityEvent onCollision;
-  
-
-    public Vector3 originPosition;
+    public Rigidbody2D enemyRigidbody2d;
+        
 
 	// Use this for initialization
 	void Start () {
@@ -41,91 +39,79 @@ public class Enemy : MonoBehaviour {
     {
         this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
+        bool attack = false;
+
         //Log.Debug(HeroCtrl.Instance.heroPosition);
         //If you are awake. Move towards the player
         
         if (Vector3.Distance(this.transform.position, HeroCtrl.Instance.heroPosition) <= attackDistance)
         {
+            attack = true;
+            
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(this.transform.position, HeroCtrl.Instance.heroPosition, step);
 
             if (transform.position.x > HeroCtrl.Instance.heroPosition.x)
             {
-                MySpriteOBJ.transform.localScale = new Vector3(-MySpriteOriginalScale.x, MySpriteOBJ.transform.localScale.y, 1f);
+                MySpriteOBJ.transform.localScale = new Vector3(-MySpriteOriginalScale.x, MySpriteOBJ.transform.localScale.y, 0.6f);
             }
 
             if (transform.position.x < HeroCtrl.Instance.heroPosition.x)
             {
-                MySpriteOBJ.transform.localScale = new Vector3(MySpriteOriginalScale.x, MySpriteOBJ.transform.localScale.y, 1f);
+                MySpriteOBJ.transform.localScale = new Vector3(MySpriteOriginalScale.x, MySpriteOBJ.transform.localScale.y, 0.6f);
             }
+            
+            
+            anim.SetBool("Awake",attack);
+
         }
 
 
-        //anim.SetBool("Awake", EnemyAwake);
-        anim.SetBool("Dead", EnemyDead);
+        //anim.SetBool("Dead", EnemyDead);
     }
 	
-	// Update is called once per frame
-	/*void Update () {
-        float distance = Vector3.Distance(player.position, transform.position);
-
-        if (distance<attackDistance)
-        {
-            anim.SetBool("Run",true);
-
-            if (player.position.x<transform.position.x)
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
-            }else{
-                transform.localScale = new Vector3(1, 1, 1);
-
-            }
-
-            Vector3 dir = player.position - transform.position;
-            transform.position = dir.normalized * speed * Time.deltaTime + transform.position;
-        }else{
-            anim.SetBool("Run",false);
-        }
-    }*/
-
-
-
 
     void OnCollisionEnter2D(Collision2D coll)
     {
         Debug.Log(coll.contacts[0].normal.ToString());
 
 
-        if (coll.gameObject.tag == HeroCtrl.Instance.tag)
+        if (coll.gameObject.name=="Hero")
         {
             //Check who killed who. If contact happend from the top player killed the enemy. Else player died.
             if (coll.contacts[0].normal.x > -1f && coll.contacts[0].normal.x < 1f && coll.contacts[0].normal.y < -0.8f && coll.contacts[0].normal.y > -1.8f)
             {
-                
-                /*coll.rigidbody.AddForce(new Vector2(0f, 1500f));
+                this.enemyRigidbody2d.velocity = new UnityEngine.Vector2(0, enemyRigidbody2d.velocity.y);
+
+                coll.rigidbody.AddForce(new Vector2(0f, 4900f));
                 this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, -200f));
-                EnemyDead = true;*/
+                /*EnemyDead = true;*/
+                SoundManager.Instance.PlaySound("enemyDeadAudio");
                 Debug.Log("Monster died");
-                /*
+
+
+                
+                this.gameObject.SetActive(false);
                 Instantiate(enemyExplosion,this.transform.position,this.transform.rotation);
-                Invoke("iDied", 0.15f);
-                */
+
+                //Invoke("iDied",1f);
+                
+                //Destroy(this.gameObject);
+                
             }
             else
             {
-                //玩家死亡
+
                 Debug.Log("GG");
+                EventDef.LevelEvent eventId = EventDef.LevelEvent.PlayerDie;
+                AppMgr.Instance.SendEvent((int)eventId,this.gameObject);
+
             }
 
         }
 
-
-
-
-        
     }
-
-
+    
     void iDied()
     {
         Destroy(this.gameObject);

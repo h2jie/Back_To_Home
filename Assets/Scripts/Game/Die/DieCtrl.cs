@@ -13,11 +13,10 @@ public class DieCtrl : BaseUI, UIMgr.ILoadUIListener
     private Text mScoreText;
 
     public int scoreFinal = 250;
-    public int nota;
 
     protected override void OnInit()
     {
-        
+
         mCurrentLevel = LevelMgr.Instance.mCurrentLevel;
 
 
@@ -57,7 +56,7 @@ public class DieCtrl : BaseUI, UIMgr.ILoadUIListener
     protected override void OnShow(object param)
     {
         SoundManager.Instance.PlaySound("loser");
-        System.Threading.Thread.Sleep(300);
+        System.Threading.Thread.Sleep(400);
 
         int level = (int) param;
         if (level != mCurrentLevel)
