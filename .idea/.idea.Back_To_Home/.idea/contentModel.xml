@@ -30,6 +30,7 @@
       </e>
       <e p="Assets/Resources" t="Include">
         <e p="levelNumber.txt" t="Include" />
+        <e p="nota.txt" t="Include" />
         <e p="res.txt" t="Include" />
       </e>
       <e p="Assets/Scripts" t="Include">
@@ -72,6 +73,7 @@
           <e p="Die" t="Include">
             <e p="DieCtrl.cs" t="Include" />
           </e>
+          <e p="Enemy.cs" t="Include" />
           <e p="Initializer.cs" t="Include" />
           <e p="LevelMgr" t="Include">
             <e p="HeroCtrl.cs" t="Include" />

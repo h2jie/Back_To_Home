@@ -28,11 +28,24 @@ public class HeroCtrl : MonoBehaviour, IEventListener
     private bool isGameOver = false;
 
 
+    public Vector3 heroPosition;
+    
     public GameObject DeadExplosion;
 
+    private static HeroCtrl instance;
+
+    public static HeroCtrl Instance
+    {
+        get { return instance; }
+    }
 
     void Awake()
     {
+
+        instance = this;
+
+        heroPosition = this.transform.position;
+        
         
         if (AppMgr.Instance.HeroPos == Vector3.zero)
         {
@@ -67,6 +80,9 @@ public class HeroCtrl : MonoBehaviour, IEventListener
 
     void Update()
     {
+        
+        heroPosition = this.transform.position;
+        
         if (isDie || isGameOver)
         {
             return;
@@ -88,6 +104,8 @@ public class HeroCtrl : MonoBehaviour, IEventListener
 
     void FixedUpdate()
     {
+        
+        heroPosition = this.transform.position;
         if (isDie || isGameOver)
         {
             return;
