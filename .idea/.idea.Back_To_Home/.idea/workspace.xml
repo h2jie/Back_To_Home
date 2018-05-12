@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c171fce2-2ca7-4e04-b67f-ded35e137ae3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_To_Home/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_To_Home/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/enemy/Idle_enemy.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/enemy/Idle_enemy.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/enemy/enemi.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/enemy/enemi.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/enemy/run_enemy.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/enemy/run_enemy.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyDeadExplosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyDeadExplosion.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyDeadExplosion.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyDeadExplosion.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CanvasPause.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/CanvasPause.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Level_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Level_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Level_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Level_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/nota.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/nota.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/nota.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/nota.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Die/DieCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Die/DieCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="c171fce2-2ca7-4e04-b67f-ded35e137ae3" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,8 +98,8 @@
       <file leaf-file-name="Enemy.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/Enemy.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="88" column="63" selection-start-line="88" selection-start-column="63" selection-end-line="88" selection-end-column="63" />
+            <state relative-caret-position="248">
+              <caret line="63" column="12" lean-forward="true" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
               <folding>
                 <marker date="1526077505247" expanded="false" signature="6:128" ph="..." />
                 <marker date="1526077505247" expanded="true" signature="165:4007" ph="{...}" />
@@ -289,7 +273,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="294" />
     <option name="y" value="59" />
     <option name="width" value="1400" />
@@ -370,12 +354,12 @@
       <workItem from="1525906495688" duration="931000" />
       <workItem from="1525987992580" duration="6873000" />
       <workItem from="1526044896097" duration="5268000" />
-      <workItem from="1526062155985" duration="1588000" />
+      <workItem from="1526062155985" duration="2459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28891000" />
+    <option name="totallyTimeSpent" value="29762000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -387,7 +371,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="294" y="59" width="1400" height="1000" extended-state="0" />
+    <frame x="294" y="59" width="1400" height="1000" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -747,8 +731,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/Enemy.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="88" column="63" selection-start-line="88" selection-start-column="63" selection-end-line="88" selection-end-column="63" />
+        <state relative-caret-position="248">
+          <caret line="63" column="12" lean-forward="true" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
           <folding>
             <marker date="1526077505247" expanded="false" signature="6:128" ph="..." />
             <marker date="1526077505247" expanded="true" signature="165:4007" ph="{...}" />
