@@ -6613,7 +6613,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.8340626, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6624,7 +6624,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 93, y: 48}
+  m_Size: {x: 98.837524, y: 48}
   m_EdgeRadius: 0
 --- !u!61 &6104240
 BoxCollider2D:
@@ -6638,7 +6638,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0000743866, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6649,7 +6649,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 70.89, y: 97.8}
+  m_Size: {x: 94.23799, y: 97.8}
   m_EdgeRadius: 0
 --- !u!61 &6109152
 BoxCollider2D:
@@ -20239,7 +20239,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1727.7, y: 48}
-  m_SizeDelta: {x: 24, y: 24}
+  m_SizeDelta: {x: 24.49, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &22408220
 RectTransform:
@@ -20814,8 +20814,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1656.7, y: 48}
-  m_SizeDelta: {x: 24, y: 24}
+  m_AnchoredPosition: {x: 1655.8, y: 48}
+  m_SizeDelta: {x: 24.88, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &22418418
 RectTransform:
@@ -23754,8 +23754,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1656.4, y: 25}
-  m_SizeDelta: {x: 24, y: 24}
+  m_AnchoredPosition: {x: 1655.8, y: 25}
+  m_SizeDelta: {x: 24.58, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &22456762
 RectTransform:
@@ -24744,8 +24744,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1656.7, y: 72}
-  m_SizeDelta: {x: 24, y: 24}
+  m_AnchoredPosition: {x: 1655.82, y: 72}
+  m_SizeDelta: {x: 24.88, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &22470100
 RectTransform:
@@ -24782,7 +24782,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1727.4, y: 1}
-  m_SizeDelta: {x: 24, y: 24}
+  m_SizeDelta: {x: 24.79, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &22470334
 RectTransform:
@@ -24997,8 +24997,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1656.4, y: 1}
-  m_SizeDelta: {x: 24, y: 24}
+  m_AnchoredPosition: {x: 1655.8, y: 1}
+  m_SizeDelta: {x: 24.6, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &22472802
 RectTransform:
@@ -26053,7 +26053,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1727.4, y: 25}
-  m_SizeDelta: {x: 24, y: 24}
+  m_SizeDelta: {x: 24.79, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &22486450
 RectTransform:
@@ -26879,7 +26879,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1727.7, y: 72}
-  m_SizeDelta: {x: 24, y: 24}
+  m_SizeDelta: {x: 24.49, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &22498456
 RectTransform:
@@ -27185,7 +27185,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 19, y: 20}
+  m_Offset: {x: 59.474266, y: 20}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -27196,7 +27196,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 39, y: 41}
+  m_Size: {x: 119.94853, y: 41}
   m_EdgeRadius: 0
 --- !u!61 &61868059919042134
 BoxCollider2D:
@@ -27440,7 +27440,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300422, guid: a763ea6785a184fcb8237b265ba18269, type: 3}
+  m_Sprite: {fileID: 21300382, guid: a763ea6785a184fcb8237b265ba18269, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27522,13 +27522,12 @@ MonoBehaviour:
   TriggerEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114576334578314008}
-        m_MethodName: set_sprite
-        m_Mode: 2
+      - m_Target: {fileID: 1265748744140024}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300382, guid: a763ea6785a184fcb8237b265ba18269,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27753,7 +27752,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1092.5, y: 96.256}
-  m_SizeDelta: {x: 39, y: 41}
+  m_SizeDelta: {x: 120, y: 41}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &224478414501878514
 RectTransform:
