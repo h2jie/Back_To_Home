@@ -49,7 +49,7 @@ public class LevelMgr : BaseUI, IEventListener, UIMgr.ILoadUIListener
         mCurrentLevel = this.mCurrentLevel;
     }
 
-    void LateUpdate()
+    private void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {

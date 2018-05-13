@@ -48,9 +48,6 @@
             <e p="EventNode.cs" t="Include" />
             <e p="IEventListener.cs" t="Include" />
           </e>
-          <e p="FSM" t="Include">
-            <e p="StateMachine.cs" t="Include" />
-          </e>
           <e p="ResMgr" t="Include">
             <e p="AssetInfo.cs" t="Include" />
             <e p="IResLoadListener.cs" t="Include" />

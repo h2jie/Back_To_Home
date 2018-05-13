@@ -17,7 +17,6 @@ public class SelectLevelCtrl : BaseUI, UIMgr.ILoadUIListener
         "Page1",
         "Page2",
         "Page3",
-
         "BtnBack",
         "BtnDown",
         "BtnUp"
@@ -87,6 +86,7 @@ public class SelectLevelCtrl : BaseUI, UIMgr.ILoadUIListener
             AppMgr.Instance.HeroPos = Vector3.zero;
 
             UIMgr.Instance.ShowUI(UIDef.GetLevelName(level), typeof(LevelMgr), SelectLevelCtrl.Instance, level);
+            
         }
     }
 
@@ -126,7 +126,7 @@ public class SelectLevelCtrl : BaseUI, UIMgr.ILoadUIListener
                         if (level != 0)
                         {
                             Button btn = findLevels[j].GetComponent<Button>();
-                            LevelBtn levelBtn = new LevelBtn(btn, level + ((page - 1) * 6));
+                            LevelBtn levelBtn = new LevelBtn(btn, level + ((page - 1) * 3));
                             btn.onClick.AddListener(levelBtn.SelectLevel);
                             mLevels.Add(levelBtn);
                         }

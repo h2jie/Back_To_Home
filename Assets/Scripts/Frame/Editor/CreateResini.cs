@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class CreateResini  
 {
-    [MenuItem("youke/CreateResIni")]
+    [MenuItem("CreateResIni/CreateResIni")]
     public static void Createini()
     {
       
