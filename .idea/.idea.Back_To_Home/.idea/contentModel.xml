@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_Back_To_Home.427148291.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets/DeadExplosion.cs" t="Include" />
+      <e p="Assets/Demigiant" t="Include">
+        <e p="DemiLib" t="Include">
+          <e p="DemiLib.xml" t="Include" />
+        </e>
+        <e p="DOTween" t="Include">
+          <e p="DOTween43.xml" t="Include" />
+          <e p="DOTween46.xml" t="Include" />
+          <e p="DOTween50.xml" t="Include" />
+          <e p="readme.txt" t="Include" />
+        </e>
+        <e p="DOTweenCustom" t="Include">
+          <e p="DOTweenParallel.cs" t="Include" />
+        </e>
+        <e p="DOTweenPro" t="Include">
+          <e p="DOTweenAnimation.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="DOTweenAnimationInspector.cs" t="Include" />
+          </e>
+          <e p="readme.txt" t="Include" />
+        </e>
+        <e p="readme_DOTweenPro.txt" t="Include" />
+      </e>
+      <e p="Assets/Resources" t="Include">
+        <e p="levelNumber.txt" t="Include" />
+        <e p="nota.txt" t="Include" />
+        <e p="res.txt" t="Include" />
+      </e>
+      <e p="Assets/Scripts" t="Include">
+        <e p="Editor" t="Include">
+          <e p="CreateMap.cs" t="Include" />
+        </e>
+        <e p="Frame" t="Include">
+          <e p="Editor" t="Include">
+            <e p="CreateResini.cs" t="Include" />
+            <e p="SlipTexture.cs" t="Include" />
+            <e p="SpriteTitleChange.cs" t="Include" />
+          </e>
+          <e p="Event" t="Include">
+            <e p="EventDef.cs" t="Include" />
+            <e p="EventNode.cs" t="Include" />
+            <e p="IEventListener.cs" t="Include" />
+          </e>
+          <e p="ResMgr" t="Include">
+            <e p="AssetInfo.cs" t="Include" />
+            <e p="IResLoadListener.cs" t="Include" />
+            <e p="ResMgr.cs" t="Include" />
+          </e>
+          <e p="Singleton" t="Include">
+            <e p="Singleton.cs" t="Include" />
+          </e>
+          <e p="UIMgr" t="Include">
+            <e p="BaseUI.cs" t="Include" />
+            <e p="UIMgr.cs" t="Include" />
+          </e>
+          <e p="Util" t="Include">
+            <e p="ComUtil.cs" t="Include" />
+            <e p="Log.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Game" t="Include">
+          <e p="AppMgr.cs" t="Include" />
+          <e p="Die" t="Include">
+            <e p="DieCtrl.cs" t="Include" />
+          </e>
+          <e p="Enemy.cs" t="Include" />
+          <e p="Initializer.cs" t="Include" />
+          <e p="LevelMgr" t="Include">
+            <e p="HeroCtrl.cs" t="Include" />
+            <e p="LevelMgr.cs" t="Include" />
+          </e>
+          <e p="Main" t="Include">
+            <e p="AboutCtrl.cs" t="Include" />
+            <e p="List.cs" t="Include" />
+            <e p="SelectLevelCtrl.cs" t="Include" />
+            <e p="SettingsCtrl.cs" t="Include" />
+            <e p="StartCtrl.cs" t="Include" />
+          </e>
+          <e p="MusicManager.cs" t="Include" />
+          <e p="Pause" t="Include">
+            <e p="PauseCtrl.cs" t="Include" />
+          </e>
+          <e p="Props" t="Include">
+            <e p="PropsAnimation.cs" t="Include" />
+            <e p="PropsSetAction.cs" t="Include" />
+          </e>
+          <e p="SoundManager.cs" t="Include" />
+          <e p="Table" t="Include">
+            <e p="TableDataMgr.cs" t="Include" />
+          </e>
+          <e p="UIDef.cs" t="Include" />
+          <e p="Winner" t="Include">
+            <e p="WinCtrl.cs" t="Include" />
+          </e>
+        </e>
+        <e p="MapData" t="Include">
+          <e p="Tilemap.cs" t="Include" />
+          <e p="TilemapLayer.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Back_To_Home.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - KillPlane
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
@@ -13,10 +15,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Props
+  - Ground
+  - enemy
   - 
   - 
   - 
@@ -40,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 3811755195
+    locked: 0
+  - name: Ground
+    uniqueID: 1460433069
+    locked: 0
+  - name: Player
+    uniqueID: 2601140323
+    locked: 0
+  - name: panel
+    uniqueID: 1208617311
     locked: 0
